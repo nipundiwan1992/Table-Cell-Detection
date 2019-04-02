@@ -7,6 +7,7 @@ To perform the task described in the previous paragraph, we collected over 400 P
 
 
 Below are the procedures to follow to achieve individual goals in this stepwise approach:
+
 Table Detection
 1.)	You will need to install cv2 and luminoth for this
 2.)	To add new images for classification, add them in the images folder
@@ -14,10 +15,9 @@ Table Detection
 4.)	If there are multiple tables in an image, you need to add separate rows for the table cells with the same image_id
 5.)	The Table Detection code was run on Google Colab for GPU utility and so the folders are named according to that. When it’s run locally, you can replace the “content/” path with the path of the folder in which you’ve placed the data
 6.)	A variable has been created to store the predicted table details of the algorithm and write it into a file
+
 Table Cell Detection
 1.)	You will need to Install Pytesseract,OpenCv
 2.)	For this, the images are placed in the TCD folder and their table coordinates are obtained from the train.csv file
 3.)	To change the file you’re using, you will need to replace train.csv with a similar structure file which has the table coordinates. As generated from the Table Detection code
 4.)	Once the coordinates are obtained and the word boxes are generated, we use K-means clustering to obtain the columns and then the cells are obtained by comparing the Y coordinates
-
-
